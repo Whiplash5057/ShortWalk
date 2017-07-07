@@ -54,7 +54,6 @@ import in.devdesk.shortwalk.Utilities.MapHelperClasses;
 
 import static in.devdesk.shortwalk.Utilities.FinalStrings.HOMEBASEVALUE;
 import static in.devdesk.shortwalk.Utilities.FinalStrings.MY_PERMISSIONS_REQUEST_LOCATION;
-import static in.devdesk.shortwalk.Utilities.FinalStrings.PACKAGE_NAME;
 
 /**
  * Created by richardandrews on 24/06/17.
