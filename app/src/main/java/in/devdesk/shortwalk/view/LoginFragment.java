@@ -56,8 +56,7 @@ public class LoginFragment extends Fragment {
         loginFragmentPresenter = new LoginFragmentPresenter();
         if(Utils.isNetworkAvailable(getActivity()))
         {
-            String response = loginFragmentPresenter.callLoginApi(loginDetails);
-            Toast.makeText(getActivity(),response + " is the response ", Toast.LENGTH_SHORT).show();
+            loginFragmentPresenter.callLoginApi(loginDetails);
         }
         else{
             Toast.makeText(getActivity(), "No Internet", Toast.LENGTH_SHORT).show();

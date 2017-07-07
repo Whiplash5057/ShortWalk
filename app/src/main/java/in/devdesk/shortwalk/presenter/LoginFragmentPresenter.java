@@ -20,27 +20,25 @@ public class LoginFragmentPresenter implements ShortWalkModelPresenter.LoginFrag
     private RestManager mManager;
     private LoginRequest loginRequest;
     private String responseMessage;
+
     @Override
     public String callLoginApi(HashMap<String, String> loginDetails) {
 
         loginRequest = new LoginRequest(loginDetails.get("username"), loginDetails.get("password"));
         mManager = new RestManager();
 
-        Call<LoginResponse> loginCall = mManager.getmItemService().createNewAccount(loginRequest);
-        loginCall.enqueue(new Callback<LoginResponse>() {
+        Call<LoginResponse.MainPojo> loginCall = mManager.getmItemService().createNewAccount(loginRequest);
+        loginCall.enqueue(new Callback<LoginResponse.MainPojo>() {
             @Override
-            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+            public void onResponse(Call<LoginResponse.MainPojo> call, Response<LoginResponse.MainPojo> response) {
+                if (response.isSuccessful()) {
+                    LoginResponse.MainPojo successLogin = response.body();
+//                    Log.e("Success", successLogin.getMessage());
 
-                if (response.isSuccessful())
-                {
-                    LoginResponse successLogin = response.body();
-                    Log.e("Success", successLogin.getMessage());
-
-                    responseMessage = successLogin.getMessage();
+                    responseMessage = successLogin.getResponse().getAuthToken();
                     Log.e("Success", responseMessage);
-                }
-                else {
-                    LoginResponse errorMessage = response.body();
+                } else {
+                    LoginResponse.MainPojo errorMessage = response.body();
                     int sc = response.code();
                     switch (sc) {
                         case 400:
@@ -52,14 +50,14 @@ public class LoginFragmentPresenter implements ShortWalkModelPresenter.LoginFrag
                         case 402:
                             Log.e("Error", "Enter your correct username and password");
                         default:
-                            Log.e("Error", "Generic Error " + sc);
+                            Log.e("Error", "Something went wrong.");
                     }
                     responseMessage = "error";
                 }
             }
 
             @Override
-            public void onFailure(Call<LoginResponse> call, Throwable t) {
+            public void onFailure(Call<LoginResponse.MainPojo> call, Throwable t) {
 
             }
         });

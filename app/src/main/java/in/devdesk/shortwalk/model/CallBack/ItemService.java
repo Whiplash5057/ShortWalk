@@ -16,5 +16,5 @@ import retrofit2.http.POST;
 public interface ItemService {
 
     @POST("api/login")
-    Call<LoginResponse> createNewAccount(@Body LoginRequest loginRequest);
+    Call<LoginResponse.MainPojo> createNewAccount(@Body LoginRequest login);
 }

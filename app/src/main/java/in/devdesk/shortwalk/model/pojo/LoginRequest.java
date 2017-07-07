@@ -30,11 +30,13 @@ public class LoginRequest implements Serializable{
     }
 
 }
+
 /**
- * {
- * "message": "success",
- * "response": {
- * "authToken": "$2a$10$gYMneGMbXCqnmvPlN6J5juWsJ4vkRNxozojcVkQFmxfrvq3B5SLPy595f68b91d31b03c9b26f459"
- * }
- * }
+ {
+ "message": "success",
+ "status": "success",
+ "response": {
+ "authToken": "$2a$10$X0CrBk6UHy8w8jfvkMkur.jA3LhJTA2Ggpqh30FyWnQRqL0PGVVYO595f9e9daff25a49e35f8987"
+ }
+ }
  */
