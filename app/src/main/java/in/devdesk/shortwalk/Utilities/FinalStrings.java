@@ -13,7 +13,7 @@ public class FinalStrings {
     public static final String HOMEBASEVALUE = PACKAGE_NAME + "homeBaseValue";
 
     public static final class HTTP {
-        public static final String  BASE_URL = "http://services.hanselandpetal.com";
+        public static final String  BASE_URL = "http://10.0.2.2:3050";
     }
     public static final class Config {
         public static final String  PACKAGE_NAME = "in.devdesk.retrofitrecyclerview.";

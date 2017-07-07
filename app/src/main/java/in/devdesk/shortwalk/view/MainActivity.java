@@ -40,15 +40,9 @@ public class MainActivity extends AppCompatActivity {
     //THIS IS WHERE THE LOGIN AND DEMO OF THE APP WILL BE PLACED...
     //TO FIND OUT WHERE THE ACTUAL APP BEGINS CHECK OUT PARENTTAB ACTIVITY
 
-//    @OnClick(R.id.buttonfornow)
-//    public void submit(View view) {
-//        // TODO submit data to server...
-//        Intent i = new Intent(this,ParentTab.class);
-//        i.putExtra(FinalStrings.MAINACTIVITY_TO_PARENTTAB, "TestFinals");
-//        startActivity(i);
-//    }
 
     private boolean mShowingNext;
+    Thread thread;
 
     @BindString(R.string.loginSignup_btn_txt) String signUpTag;
 
@@ -80,8 +74,16 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
 
+        initializeElements();
 
-        Thread thread = new Thread(new Runnable() {
+        thread.start();
+
+        setLoginFragment("login");
+
+    }
+
+    private void initializeElements() {
+        thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 SharedPreferences getPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
@@ -94,10 +96,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-        thread.start();
-        setLoginFragment("login");
-
     }
 
     private void setLoginFragment(String fragSelection) {
