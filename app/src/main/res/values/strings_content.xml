@@ -32,6 +32,13 @@
     <string name="slide_5_title">Enervate to Energised</string>
     <string name="slide_5_description">Select locations on the map. Swipe left to moniter your progress. Swipe right to see how others are doing.</string>
 
+    <string name="loginSignup_btn_txt">New to ShortWalk? Sign Up!!!</string>
+    <string name="signup_btn_hint">Sign Up</string>
+    <string name="login_btn_hint">Log In</string>
+    <string name="password_et_hint">Password</string>
+    <string name="email_et_hint">Email</string>
+    <string name="username_et_hint">Username</string>
+
     <string-array name="locationTypes">
         <item>Bars</item>
         <item>Restaurants</item>
