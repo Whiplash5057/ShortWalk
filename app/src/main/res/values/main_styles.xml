@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Component styles. -->
+    <style name="mainRectangles" parent="extremeElevation">
+        <item name="android:background">@drawable/rectangle</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="mainRectanglesWithoutElevation">
+        <item name="android:background">@drawable/rectangle</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="mainRectanglesWithoutPrimaryColor" parent="extremeElevation">
+        <item name="android:background">@drawable/rectangle_primary</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:padding">@dimen/mediumMarginOrPadding</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!-- Component styles. ***-->
+
+</resources>

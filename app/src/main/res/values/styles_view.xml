@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- Base styles. -->
+    <style name="shortElevation">
+        <item name="android:background">@drawable/alternate_dropshadow</item>
+    </style>
+    <style name="mediumElevation">
+        <item name="android:background">@drawable/alternate_dropshadow</item>
+    </style>
+    <style name="longElevation">
+        <item name="android:background">@drawable/alternate_dropshadow</item>
+    </style>
+    <style name="extremeElevation">
+        <item name="android:background">@drawable/alternate_dropshadow</item>
+    </style>
+    <!-- Base styles. ***-->
+
+
+
+
+
+</resources>

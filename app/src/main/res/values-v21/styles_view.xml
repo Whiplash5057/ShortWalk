@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base styles. -->
+    <style name="shortElevation">
+        <item name="android:elevation">4dp</item>
+    </style>
+    <style name="mediumElevation">
+        <item name="android:elevation">6dp</item>
+    </style>
+    <style name="longElevation">
+        <item name="android:elevation">8dp</item>
+    </style>
+    <style name="extremeElevation">
+        <item name="android:elevation">20dp</item>
+    </style>
+    <!-- Base styles. ***-->
+
+
+</resources>

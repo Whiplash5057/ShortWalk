@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <fragment
+        android:id="@+id/mapfragment_mapscreen_display"
+        android:name="in.devdesk.shortwalk.view.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/map_fragment" />
+
+    <TextView
+        android:id="@+id/lb_mainmap_bounceback"
+        style="@style/mainRectanglesWithoutPrimaryColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:text="@string/map_msg"
+        android:textColor="@color/secondaryTextColor" />
+
+    <LinearLayout
+        style="@style/mainRectangles"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom"
+        android:alpha="0.9"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="@dimen/largeMarginOrPadding">
+
+        <EditText
+            android:id="@+id/et_map_address"
+            style="@style/mainRectanglesWithoutElevation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/mediumMarginOrPadding"
+            android:layout_weight="1"
+            android:elevation="2dp"
+            android:gravity="center_vertical"
+            android:hint="@string/enter_location_hint"
+            android:paddingLeft="@dimen/mediumMarginOrPadding"
+            android:paddingRight="@dimen/mediumMarginOrPadding"
+            android:textSize="@dimen/smallText" />
+
+        <TextView
+            android:id="@+id/lbl_map_loctype"
+            style="@style/mainRectanglesWithoutElevation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/mediumMarginOrPadding"
+            android:layout_weight="1"
+            android:elevation="2dp"
+            android:gravity="center_vertical"
+            android:hint="@string/enter_location_type_hint"
+            android:paddingLeft="@dimen/mediumMarginOrPadding"
+            android:paddingRight="@dimen/mediumMarginOrPadding"
+            android:textSize="@dimen/smallText" />
+
+        <Button
+            android:id="@+id/btn_map_shuffle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/mediumMarginOrPadding"
+            android:layout_marginRight="@dimen/mediumMarginOrPadding"
+            android:layout_marginTop="@dimen/mediumMarginOrPadding"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:tag="1"
+            android:text="@string/home_current_location_hint"
+            android:textColor="@color/secondaryTextColor" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setHomeValue"
+        android:background="@color/darkone"
+        android:elevation="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="205dp"
+        android:layout_gravity="bottom"
+        android:alpha="0.9"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="@dimen/largeMarginOrPadding"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/lbl_map_homeloc"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/mediumMarginOrPadding"
+            android:layout_weight="1"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:text="@string/set_home_locn"
+            android:paddingLeft="@dimen/mediumMarginOrPadding"
+            android:paddingRight="@dimen/mediumMarginOrPadding"
+            android:textSize="@dimen/mediumText"
+            android:textStyle="bold"
+            android:textColor="@color/secondaryTextColor"/>
+
+        <EditText
+            android:id="@+id/et_map_homeloc"
+            style="@style/mainRectanglesWithoutElevation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/mediumMarginOrPadding"
+            android:layout_weight="1"
+            android:elevation="2dp"
+            android:gravity="center_vertical"
+            android:hint="@string/enter_location_hint"
+            android:paddingLeft="@dimen/mediumMarginOrPadding"
+            android:paddingRight="@dimen/mediumMarginOrPadding"
+            android:textSize="@dimen/smallText" />
+
+        <Button
+            android:id="@+id/btn_map_homeloc"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/mediumMarginOrPadding"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/home_current_location_confirm"
+            android:textColor="@color/secondaryTextColor" />
+
+    </LinearLayout>
+
+
+</FrameLayout>
