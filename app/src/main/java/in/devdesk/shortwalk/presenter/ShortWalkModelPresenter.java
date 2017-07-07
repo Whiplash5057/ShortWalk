@@ -1,5 +1,7 @@
 package in.devdesk.shortwalk.presenter;
 
+import java.util.HashMap;
+
 /**
  * Created by richardandrews on 28/06/17.
  */
@@ -70,5 +72,16 @@ public interface ShortWalkModelPresenter {
 
     };
 //----- xxx -----//
+
+/**
+ * map_fragment
+ */
+    public interface LoginFragmentPresenter{
+
+        String callLoginApi(HashMap<String, String> loginDetails);
+    };
+
+//----- xxx -----//
+
 
 }

@@ -73,4 +73,15 @@ public interface ShortWalkViewPresenter {
     };
 //----- xxx -----//
 
+
+/**
+ * login_page
+ */
+    public interface LoginFragmentPresenter{
+
+
+    };
+
+//----- xxx -----//
+
 }

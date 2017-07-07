@@ -23,14 +23,14 @@
 
 
     <EditText
-        android:id="@+id/userName"
+        android:id="@+id/et_login_loginpage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/username_et_hint"
         style="@style/editText_style"/>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/et_password_loginpage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"

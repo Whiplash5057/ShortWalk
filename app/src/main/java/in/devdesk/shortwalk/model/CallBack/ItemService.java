@@ -2,10 +2,11 @@ package in.devdesk.shortwalk.model.CallBack;
 
 import java.util.List;
 
-import in.devdesk.shortwalk.model.pojo.Login.LoginRequest;
-import in.devdesk.shortwalk.model.pojo.Login.LoginResponse;
+import in.devdesk.shortwalk.model.pojo.LoginRequest;
+import in.devdesk.shortwalk.model.pojo.LoginResponse;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 /**
@@ -14,6 +15,6 @@ import retrofit2.http.POST;
 
 public interface ItemService {
 
-    @POST("api/newuser")
-    Call<List<LoginResponse>> createNewAccount(@Body LoginRequest loginRequest);
+    @POST("api/login")
+    Call<LoginResponse> createNewAccount(@Body LoginRequest loginRequest);
 }

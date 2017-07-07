@@ -73,4 +73,13 @@ public interface ShortWalkModel {
     };
 //----- xxx -----//
 
+
+/**
+ * login_page
+ */
+    public interface LoginFragmentModel{
+
+    };
+
+//----- xxx -----//
 }

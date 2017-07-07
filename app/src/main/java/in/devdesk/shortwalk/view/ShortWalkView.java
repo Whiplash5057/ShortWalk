@@ -71,6 +71,13 @@ public interface ShortWalkView {
     };
 //----- xxx -----//
 
+/**
+ * login_page
+ */
+    public interface LoginFragment{
 
+    };
+
+//----- xxx -----//
 
 }
