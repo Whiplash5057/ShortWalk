@@ -78,7 +78,7 @@ public interface ShortWalkModelPresenter {
  */
     public interface LoginFragmentPresenter{
 
-        String callLoginApi(HashMap<String, String> loginDetails);
+        void callLoginApiInPresenter(HashMap<String, String> loginDetails);
     };
 
 //----- xxx -----//

@@ -75,7 +75,7 @@ public interface ShortWalkView {
  * login_page
  */
     public interface LoginFragment{
-
+        public void receiveResponse(String successFailure);
     };
 
 //----- xxx -----//

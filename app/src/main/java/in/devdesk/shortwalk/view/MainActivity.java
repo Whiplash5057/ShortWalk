@@ -100,6 +100,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void setLoginFragment(String fragSelection) {
 
+//        Intent i = new Intent(this,ParentTab.class);
+//        i.putExtra(FinalStrings.MAINACTIVITY_TO_PARENTTAB, "TestFinals");
+//        startActivity(i);
+
+
+
         LoginFragment loginFragment = new LoginFragment();
         SignUpFragment signUpFragment = new SignUpFragment();
         SplashScreen splashScreen = new SplashScreen();
@@ -109,20 +115,22 @@ public class MainActivity extends AppCompatActivity {
 
         switch (fragSelection) {
             case "login":
-
                 transaction.replace(R.id.frag_container_main, loginFragment, "LoginFragment");
+                transaction.commit();
                 break;
             case "signup":
                 transaction.replace(R.id.frag_container_main, signUpFragment, "SignUpFragment");
+                transaction.commit();
                 break;
             case "splashscreen":
                 transaction.replace(R.id.frag_container_main, splashScreen, "SplashScreenFragment");
+                transaction.commit();
                 break;
             default:
                 break;
         }
 
-        transaction.commit();
+
     }
 
 }

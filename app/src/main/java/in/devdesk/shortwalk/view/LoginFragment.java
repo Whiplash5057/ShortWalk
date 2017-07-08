@@ -1,5 +1,6 @@
 package in.devdesk.shortwalk.view;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -19,7 +20,6 @@ import in.devdesk.shortwalk.R;
 import in.devdesk.shortwalk.Utilities.FinalStrings;
 import in.devdesk.shortwalk.Utilities.Utils;
 import in.devdesk.shortwalk.presenter.LoginFragmentPresenter;
-import in.devdesk.shortwalk.presenter.ShortWalkModelPresenter;
 
 /**
  * Created by richardandrews on 06/07/17.
@@ -29,7 +29,7 @@ public class LoginFragment extends Fragment {
 
 
     String username, password;
-    ShortWalkModelPresenter.LoginFragmentPresenter loginFragmentPresenter;
+    private Context context;
     HashMap<String, String> loginDetails = new HashMap<>();
 
     @BindView(R.id.et_login_loginpage)
@@ -47,23 +47,21 @@ public class LoginFragment extends Fragment {
 //        i.putExtra(FinalStrings.MAINACTIVITY_TO_PARENTTAB, "TestFinals");
 //        startActivity(i);
 
-        username = usernameView.getText().toString();
-        password = passwordView.getText().toString();
-
-
-        loginDetails.put("username", username);
-        loginDetails.put("password", password);
-        loginFragmentPresenter = new LoginFragmentPresenter();
-        if(Utils.isNetworkAvailable(getActivity()))
-        {
-            loginFragmentPresenter.callLoginApi(loginDetails);
-        }
-        else{
-            Toast.makeText(getActivity(), "No Internet", Toast.LENGTH_SHORT).show();
-        }
-
+//        username = usernameView.getText().toString();
+//        password = passwordView.getText().toString();
+//
+//
+//        loginDetails.put("username", username);
+//        loginDetails.put("password", password);
+        LoginFragmentPresenter loginFragmentPresenter = new LoginFragmentPresenter();
+        loginFragmentPresenter.loginTesting("asdfas");
 
     }
+    public void loginInnerFragTesting(String test)
+    {
+        Toast.makeText(context, test, Toast.LENGTH_SHORT).show();
+    }
+
 
     @Nullable
     @Override
@@ -76,5 +74,6 @@ public class LoginFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        context = getActivity();
     }
 }

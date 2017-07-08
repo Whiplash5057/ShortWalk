@@ -1,5 +1,7 @@
 package in.devdesk.shortwalk.model;
 
+import java.util.HashMap;
+
 /**
  * Created by richardandrews on 28/06/17.
  */
@@ -80,6 +82,8 @@ public interface ShortWalkModel {
  * login_page
  */
     public interface LoginFragmentModel{
+
+        public void callForLoginApi(HashMap<String, String> loginDetails);
 
     };
 
